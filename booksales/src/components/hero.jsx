@@ -1,4 +1,4 @@
-function Hero() {
+export default function Hero() {
   return (
     <div className="container">
       <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg mb-5">
@@ -37,5 +37,3 @@ function Hero() {
     </div>
   );
 }
-
-export default Hero;

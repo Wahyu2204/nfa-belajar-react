@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-// Import komponen Layout
+// Import komponen Layout (pastikan nama file sesuai, biasanya diawali huruf besar)
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -9,24 +9,18 @@ import Home from "./pages/home";
 import Team from "./pages/team";
 import Contact from "./pages/contact";
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="container">
-        <Header />
+    <div className="container">
+      <Header />
 
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
-        <Footer />
-      </div>
-    </Router>
+      <Footer />
+    </div>
   );
 }
-
-export default App;
