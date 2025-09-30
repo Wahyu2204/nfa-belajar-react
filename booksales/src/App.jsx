@@ -1,26 +1,21 @@
 import { Routes, Route } from "react-router-dom";
-
-// Import komponen Layout (pastikan nama file sesuai, biasanya diawali huruf besar)
-import Header from "./components/header";
-import Footer from "./components/footer";
+import DefaultLayouting from "./layout/defaultLayouting";
 
 // Import semua halaman
 import Home from "./pages/home";
 import Team from "./pages/team";
 import Contact from "./pages/contact";
+import Books from "./pages/book";
 
 export default function App() {
   return (
-    <div className="container">
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<DefaultLayouting />}>
+        <Route index element={<Home />} />
+        <Route path="team" element={<Team />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="book" element={<Books />} />
+      </Route>
+    </Routes>
   );
 }

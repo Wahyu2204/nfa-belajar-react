@@ -23,7 +23,7 @@ export default function Header() {
         </li>
         <li>
           {/* Nanti kita akan buat halaman Book */}
-          <Link to="/books" className="nav-link px-2">
+          <Link to="/book" className="nav-link px-2">
             Book
           </Link>
         </li>
